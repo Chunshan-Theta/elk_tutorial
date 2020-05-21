@@ -1,0 +1,47 @@
+2020-05-19 01:30:52,760 INFO      Preparing Action ID: 1, "delete_indices"
+2020-05-19 01:30:52,760 INFO      Creating client object and testing connection
+2020-05-19 01:30:52,763 INFO      Instantiating client object
+2020-05-19 01:30:52,764 INFO      Testing client connectivity
+2020-05-19 01:30:52,769 INFO      Successfully created Elasticsearch client object with provided settings
+2020-05-19 01:30:52,772 WARNING   allow_ilm_indices: true
+2020-05-19 01:30:52,772 WARNING   Permitting operation on indices with an ILM policy
+2020-05-19 01:30:52,772 INFO      Trying Action ID: 1, "delete_indices": Delete indices older than 15 days (based on index name), for logstash- prefixed indices. Ignore the error if the filter does not result in an actionable list of indices (ignore_empty_list) and exit cleanly.
+2020-05-19 01:30:52,840 INFO      Deleting 1 selected indices: ['logstash-2020.04.24-000001']
+2020-05-19 01:30:52,840 INFO      ---deleting index logstash-2020.04.24-000001
+2020-05-19 01:30:54,585 INFO      Action ID: 1, "delete_indices" completed.
+2020-05-19 01:30:54,585 INFO      Preparing Action ID: 2, "close"
+2020-05-19 01:30:54,585 INFO      Creating client object and testing connection
+2020-05-19 01:30:54,585 INFO      Instantiating client object
+2020-05-19 01:30:54,586 INFO      Testing client connectivity
+2020-05-19 01:30:54,591 INFO      Successfully created Elasticsearch client object with provided settings
+2020-05-19 01:30:54,594 WARNING   allow_ilm_indices: true
+2020-05-19 01:30:54,594 WARNING   Permitting operation on indices with an ILM policy
+2020-05-19 01:30:54,594 INFO      Trying Action ID: 2, "close": Close indices older than 8 days.
+2020-05-19 01:30:54,649 INFO      Closing 1 selected indices: ['.reporting-2020.05.03']
+2020-05-19 01:30:54,655 ERROR     Failed to complete action: close.  <class 'curator.exceptions.FailedExecution'>: Exception encountered.  Rerun with loglevel DEBUG and/or check Elasticsearch logs for more information. Exception: AuthorizationException(403, 'cluster_block_exception', 'index [.reporting-2020.05.03] blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];')
+2020-05-19 01:30:54,655 INFO      Continuing execution with next action because "continue_if_exception" is set to True for action close
+2020-05-19 01:30:54,655 INFO      Action ID: 2, "close" completed.
+2020-05-19 01:30:54,655 INFO      Job completed.
+2020-05-19 03:00:01,819 INFO      Preparing Action ID: 1, "delete_indices"
+2020-05-19 03:00:01,830 INFO      Creating client object and testing connection
+2020-05-19 03:00:01,835 INFO      Instantiating client object
+2020-05-19 03:00:01,835 INFO      Testing client connectivity
+2020-05-19 03:00:01,842 INFO      Successfully created Elasticsearch client object with provided settings
+2020-05-19 03:00:01,845 WARNING   allow_ilm_indices: true
+2020-05-19 03:00:01,846 WARNING   Permitting operation on indices with an ILM policy
+2020-05-19 03:00:01,846 INFO      Trying Action ID: 1, "delete_indices": Delete indices older than 15 days (based on index name), for logstash- prefixed indices. Ignore the error if the filter does not result in an actionable list of indices (ignore_empty_list) and exit cleanly.
+2020-05-19 03:00:01,918 INFO      Skipping action "delete_indices" due to empty list: <class 'curator.exceptions.NoIndices'>
+2020-05-19 03:00:01,918 INFO      Action ID: 1, "delete_indices" completed.
+2020-05-19 03:00:01,918 INFO      Preparing Action ID: 2, "close"
+2020-05-19 03:00:01,918 INFO      Creating client object and testing connection
+2020-05-19 03:00:01,918 INFO      Instantiating client object
+2020-05-19 03:00:01,918 INFO      Testing client connectivity
+2020-05-19 03:00:01,922 INFO      Successfully created Elasticsearch client object with provided settings
+2020-05-19 03:00:01,924 WARNING   allow_ilm_indices: true
+2020-05-19 03:00:01,924 WARNING   Permitting operation on indices with an ILM policy
+2020-05-19 03:00:01,924 INFO      Trying Action ID: 2, "close": Close indices older than 8 days.
+2020-05-19 03:00:01,982 INFO      Closing 1 selected indices: ['.reporting-2020.05.03']
+2020-05-19 03:00:01,990 ERROR     Failed to complete action: close.  <class 'curator.exceptions.FailedExecution'>: Exception encountered.  Rerun with loglevel DEBUG and/or check Elasticsearch logs for more information. Exception: AuthorizationException(403, 'cluster_block_exception', 'index [.reporting-2020.05.03] blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];')
+2020-05-19 03:00:01,990 INFO      Continuing execution with next action because "continue_if_exception" is set to True for action close
+2020-05-19 03:00:01,990 INFO      Action ID: 2, "close" completed.
+2020-05-19 03:00:01,991 INFO      Job completed.
